@@ -18,13 +18,12 @@
     --neutral-850: #1d1e25;
   }
 
-  .container {
-    max-width: unset;
-    padding-inline: 4.7%;
+  .ctn {
+    padding-inline: 6.4%;
   }
 
   @media screen(xl) {
-    .container {
+    .ctn {
       padding-inline: calc(50% - 550px);
     }
   }
@@ -98,6 +97,54 @@
     .body-sm {
       font-size: 1rem;
       line-height: 1.625rem;
+    }
+  }
+}
+
+/*utilities*/
+@layer components {
+  .sidebar-backdrop {
+    @apply fixed w-full h-screen top-0 left-0;
+    z-index: 98;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.0001) 0.33%,
+      rgba(0, 0, 0, 0.599049) 99.79%
+    );
+  }
+}
+
+/*patterns*/
+@layer components {
+  .hero-pattern {
+    @apply absolute;
+    width: 20rem;
+    height: 21.25rem;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .hero-pattern::before {
+    @apply absolute bg-center bg-contain bg-no-repeat;
+    content: "";
+    width: 143.75%;
+    padding-bottom: 143.75%;
+    bottom: 0;
+    left: 0;
+    background-image: url(/background/bg-tablet-pattern.svg);
+  }
+
+  @media screen(xl) {
+    .hero-pattern {
+      width: 41.875rem;
+      height: 41.25rem;
+    }
+
+    .hero-pattern::before {
+      width: 121.4925373%;
+      padding-bottom: 121.4925373%;
     }
   }
 }

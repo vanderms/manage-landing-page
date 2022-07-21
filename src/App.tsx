@@ -8,6 +8,7 @@ import { Footer } from "./components/sections/footer/footer";
 function App() {
   return (
     <div className="md:max-w-[52rem]  xl:max-w-[90rem] mx-auto">
+      <div className="hero-pattern"></div>
       <Navbar />
       <main>
         <HeroSection />
