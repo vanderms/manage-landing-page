@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Be Vietnam Pro", sans-serif;
+  }
+
+  :root {
+    --primary: #f3603c;
+    --primary-100: #fff0ec;
+    --primary-300: #f98f75;
+    --neutral-50: #fff;
+    --neutral-100: #fafafa;
+    --neutral-500: #242d5280;
+    --neutral-800: #242d52;
+    --neutral-850: #1d1e25;
+  }
+
+  .container {
+    max-width: unset;
+    padding-inline: 4.7%;
+  }
+
+  @media screen(xl) {
+    .container {
+      padding-inline: calc(50% - 550px);
+    }
+  }
+}
+
+/*Typography*/
+@layer components {
+  .title-xl {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+    letter-spacing: -1px;
+  }
+
+  .title-lg {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.714286px;
+  }
+
+  .title-md {
+    font-weight: 700;
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
+    letter-spacing: -0.61875px;
+  }
+
+  .title-sm {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.4375rem;
+    letter-spacing: -0.285714px;
+  }
+
+  .body-md {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.75rem;
+  }
+
+  .body-sm {
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.75rem;
+  }
+
+  @media screen(xl) {
+    .title-xl {
+      font-size: 3.5rem;
+      line-height: 4rem;
+    }
+
+    .title-lg {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+    }
+
+    .title-md {
+      font-size: 2.5rem;
+      line-height: 2.75rem;
+      letter-spacing: -0.714286px;
+    }
+
+    .body-md {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+
+    .body-sm {
+      font-size: 1rem;
+      line-height: 1.625rem;
+    }
+  }
+}
