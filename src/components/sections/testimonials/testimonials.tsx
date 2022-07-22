@@ -15,6 +15,7 @@ interface ISlider {
 export const TestimonialsSection: React.FC = () => {
   const title = useId();
   const card = useRef<HTMLLIElement>(null);
+  const resizing = useRef<boolean>(false);
   const [slider, setSlider] = useState<ISlider>({
     position: 0,
     size: 0,
@@ -22,12 +23,22 @@ export const TestimonialsSection: React.FC = () => {
 
   useEffect(() => {
     if (card.current) {
-      const observer = new ResizeObserver((entries) => {
-        const size = entries[0].borderBoxSize[0].inlineSize;
-        const position = size < 540 ? -(size + 30) : -120;
-        setSlider({ size, position });
-      });
-      observer.observe(card.current, { box: "border-box" });
+      const size = card.current.getBoundingClientRect().width;
+      const position = size < 540 ? -(size + 30) : -120;
+      setSlider({ size, position });
+
+      window.addEventListener("resize", () => {
+        if (!resizing.current) {
+          resizing.current = true;
+          setTimeout(() => {
+            console.log('I am here!');            
+            const size = card.current!.getBoundingClientRect().width;
+            const position = size < 540 ? -(size + 30) : -120;
+            setSlider({ size, position });
+            resizing.current = false;
+          }, 2000);
+        }
+      });     
     }
   }, []);
 
@@ -43,7 +54,7 @@ export const TestimonialsSection: React.FC = () => {
             animate={{ x: slider.position }}
             drag="x"
             dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-            dragElastic={0.5}
+            dragElastic={0}
             whileTap={{ cursor: "grabbing" }}
             dragConstraints={{ right: 0, left: -(3 * slider.size + 90) }}
           >
