@@ -36,10 +36,13 @@ const SocialMediaLinkItem: React.FC<{ href: string; aria: string }> = (props) =>
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="ctn py-12 bg-neutral-850">
-      <div className="max-w-[26.25rem] mx-auto">
-        <NewsletterForm />
-        <ul className="flex justify-around mt-14">
+    <footer className="ctn py-12 bg-neutral-850 xl:grid xl:grid-cols-[1fr,1fr,1fr,17rem] xl:pt-[3.875rem] xl:pb-[3.8125rem]">
+      <div className="max-w-[26.25rem] mx-auto xl:contents">
+        <div className="xl:[grid-area:_1_/_4_/_span_1_/_span_1]">
+          <NewsletterForm />
+        </div>
+
+        <ul className="flex justify-around mt-14 xl:mt-0 xl:[grid-area:_1_/_2_/_span_2_/_span_2]">
           <LinksSubList>
             <LinkItem href="/#">Home</LinkItem>
             <LinkItem href="/#">Pricing</LinkItem>
@@ -52,19 +55,19 @@ export const Footer: React.FC = () => {
             <LinkItem href="/#">Privacy Policy</LinkItem>
           </LinksSubList>
         </ul>
-        <ul className="flex gap-[0.875rem] justify-center mt-12">
+        <ul className="flex gap-[0.875rem] justify-center mt-12 xl:[grid-area:_2_/_1_/_span_1_/_span_1]">
           <SocialMediaLinkItem href="https://www.facebook.com" aria="facebook" />
           <SocialMediaLinkItem href="https://www.youtube.com" aria="youtube" />
           <SocialMediaLinkItem href="https://www.twitter.com" aria="twitter" />
           <SocialMediaLinkItem href="https://www.pinterest.com" aria="pinterest" />
           <SocialMediaLinkItem href="https://www.instagram.com" aria="instagram" />
         </ul>
-        <div className="flex justify-center mt-14">
+        <div className="flex justify-center mt-14 xl:mt-0 xl:[grid-area:_1_/_1_/_span_1_/_span_1]">
           <a href="/#" aria-label="Homepage">
             <img src={Logo} alt="" />
           </a>
         </div>
-        <p className="mt-12 text-neutral-50 opacity-50 text-[0.8125rem] text-center">
+        <p className="mt-12 text-neutral-50 opacity-50 text-[0.8125rem] text-center xl:text-right xl:[grid-area:_2_/_4_/_span_1_/_span_1] ">
           Copyright 2020. All Rights Reserved
         </p>
       </div>
