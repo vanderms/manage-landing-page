@@ -19,8 +19,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
 const Card: React.FC<TestimonialCardProps> = (props) => {
   return (
     <figure className="relative bg-neutral-100 px-[1.3125rem] pb-[2.625rem]">
-      <div className="absolute top-0 left-0 bg-neutral-50 w-full h-9"></div>
-      <figcaption className="relative z-10 w-full flex flex-col items-center">        
+      <figcaption className="relative z-10 w-full flex flex-col items-center">
         <img
           src={props.avatar}
           alt={props.name}
@@ -31,6 +30,7 @@ const Card: React.FC<TestimonialCardProps> = (props) => {
       <blockquote className="mt-[1.1875rem] body-sm text-neutral-500 text-center">
         {props.children}
       </blockquote>
+      <div className="absolute top-0 left-0 bg-neutral-50 w-full h-9"></div>
     </figure>
   );
 };
