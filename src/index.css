@@ -16,6 +16,7 @@
     --neutral-500: #242d5280;
     --neutral-800: #242d52;
     --neutral-850: #1d1e25;
+    --danger: #f33c3c;
   }
 
   .ctn {
@@ -164,5 +165,46 @@
       height: 22.5rem;
       background-image: url(/background/bg-simplify-section-desktop.svg);
     }
+  }
+}
+
+/*Icons*/
+@layer components {
+  .social-media-icon {
+    @apply block w-6 h-6;
+    background: theme(colors.neutral-50);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+  }
+
+  @media screen(xl) {
+    .social-media-icon {
+      @apply w-5 h-5;
+    }
+  }
+
+  .social-media-icon:hover {
+    background: theme(colors.primary);
+  }
+
+  .social-media-icon[aria-label="facebook"] {
+    mask-image: url(/icons/icon-facebook.svg);
+  }
+
+  .social-media-icon[aria-label="instagram"] {
+    mask-image: url(/icons/icon-instagram.svg);
+  }
+
+  .social-media-icon[aria-label="youtube"] {
+    mask-image: url(/icons/icon-youtube.svg);
+  }
+
+  .social-media-icon[aria-label="pinterest"] {
+    mask-image: url(/icons/icon-pinterest.svg);
+  }
+
+  .social-media-icon[aria-label="twitter"] {
+    mask-image: url(/icons/icon-twitter.svg);
   }
 }

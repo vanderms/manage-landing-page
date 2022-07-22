@@ -21,7 +21,7 @@ module.exports = {
       "neutral-800": "var(--neutral-800)",
       "neutral-850": "var(--neutral-850)",
       "transparent": "transparent",
-
+      "danger": "var(--danger)",
     },
 
     extend: {},

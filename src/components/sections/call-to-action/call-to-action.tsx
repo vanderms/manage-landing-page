@@ -11,7 +11,7 @@ export const CallToActionSection: React.FC = () => {
     >
       <h2
         id={title}
-        className="title-lg text-neutral-50 text-center max-w-[27.8125rem] xl:text-left"
+        className="title-lg text-neutral-50 text-center max-w-[27.8125rem] mx-auto xl:text-left xl:mx-0"
       >
         Simplify how your team works today.
       </h2>
