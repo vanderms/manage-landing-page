@@ -18,7 +18,7 @@ export const TestimonialCard: React.FC<TestimonialCardProps> = (props) => {
 
 const Card: React.FC<TestimonialCardProps> = (props) => {
   return (
-    <figure className="relative bg-neutral-100 px-[1.3125rem] pb-[2.625rem]">
+    <figure className="relative bg-neutral-100 px-[1.3125rem] pb-[2.625rem] xl:px-10">
       <figcaption className="relative z-10 w-full flex flex-col items-center">
         <img
           src={props.avatar}

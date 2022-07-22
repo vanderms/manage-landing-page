@@ -55,14 +55,14 @@ export const Footer: React.FC = () => {
             <LinkItem href="/#">Privacy Policy</LinkItem>
           </LinksSubList>
         </ul>
-        <ul className="flex gap-[0.875rem] justify-center mt-12 xl:[grid-area:_2_/_1_/_span_1_/_span_1]">
+        <ul className="flex gap-[0.875rem] justify-center mt-12 xl:[grid-area:_2_/_1_/_span_1_/_span_1] xl:justify-start">
           <SocialMediaLinkItem href="https://www.facebook.com" aria="facebook" />
           <SocialMediaLinkItem href="https://www.youtube.com" aria="youtube" />
           <SocialMediaLinkItem href="https://www.twitter.com" aria="twitter" />
           <SocialMediaLinkItem href="https://www.pinterest.com" aria="pinterest" />
           <SocialMediaLinkItem href="https://www.instagram.com" aria="instagram" />
         </ul>
-        <div className="flex justify-center mt-14 xl:mt-0 xl:[grid-area:_1_/_1_/_span_1_/_span_1]">
+        <div className="flex justify-center mt-14 xl:mt-0 xl:[grid-area:_1_/_1_/_span_1_/_span_1] xl:justify-start">
           <a href="/#" aria-label="Homepage">
             <img src={Logo} alt="" />
           </a>
