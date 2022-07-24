@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="md:max-w-[52rem]  xl:max-w-[90rem] mx-auto">
       <div className="hero-pattern"></div>
+      <div className="hero-pattern clone"></div>
       <Navbar />
       <main>
         <HeroSection />

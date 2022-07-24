@@ -127,6 +127,11 @@
     z-index: -1;
   }
 
+  .hero-pattern.clone {
+    transform: scale(0.697416974) translate(140px, 850px);
+    transform-origin: top right;    
+  }
+
   .hero-pattern::before {
     @apply absolute bg-center bg-contain bg-no-repeat;
     content: "";
@@ -146,6 +151,11 @@
     .hero-pattern::before {
       width: 121.4925373%;
       padding-bottom: 121.4925373%;
+    }
+
+    .hero-pattern.clone {
+      transform: scale(1) translate(-1120px, 1100px) rotate(180deg);
+      transform-origin: center;
     }
   }
 
